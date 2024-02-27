@@ -1,0 +1,314 @@
+/* STRUCTURE */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-inline: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Protest Riot", arial, sans-serif;
+}
+
+p {
+  font-family: "Open Sans", arial, sans-serif;
+}
+
+a {
+  font-family: "Poppins", arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.menu__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 20px;
+}
+.menu__logo img {
+  width: 3rem;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+}
+.menu__list__item {
+  display: block;
+  padding: 0.5rem;
+  position: relative;
+  background-color: white;
+}
+.menu__list__item.drop a {
+  font-size: 14px;
+}
+.menu__list__item a {
+  text-decoration: none;
+  color: black;
+}
+.menu__list__item a:hover {
+  color: #f7931e;
+}
+.menu__list__item.has-dropdown:hover .menu__dropdown {
+  display: block;
+}
+.menu__current-page a {
+  color: #0077b6;
+}
+.menu i {
+  font-size: 12px;
+  padding-left: 5px;
+  color: #0077b6;
+}
+
+.menu__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.last-item {
+  background-color: #0077b6;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.last-item a {
+  color: white;
+}
+
+.menu__list__item.has-dropdown.last-item .menu__dropdown .menu__list__item.drop a {
+  color: #000;
+}
+.menu__list__item.has-dropdown.last-item .menu__dropdown .menu__list__item.drop a:hover {
+  color: #f7931e;
+}
+.menu__list__item.has-dropdown.last-item i {
+  color: whitesmoke;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+.banner__content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #000;
+}
+.banner__button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f7931e;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #f7931e;
+  cursor: pointer;
+}
+.banner__button:hover {
+  color: #fff;
+}
+.banner__button.secondary {
+  border: 1px whitesmoke solid;
+  color: whitesmoke;
+  background-color: transparent;
+  text-shadow: 0 0 10px #000;
+}
+.banner__button.secondary:hover {
+  color: #f7931e;
+}
+
+#coach, #programmes, #temoignages {
+  padding: 50px 20px;
+}
+#coach .section__container, #programmes .section__container, #temoignages .section__container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+#coach .section__container h2, #programmes .section__container h2, #temoignages .section__container h2 {
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+#coach .section__container hr, #programmes .section__container hr, #temoignages .section__container hr {
+  border-top: 4px solid #f7931e;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  width: 80%;
+  margin-top: 0;
+}
+#coach .coach__apropos, #programmes .coach__apropos, #temoignages .coach__apropos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 20px;
+}
+#coach .coach__apropos__img, #programmes .coach__apropos__img, #temoignages .coach__apropos__img {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#coach .coach__apropos__img__button, #programmes .coach__apropos__img__button, #temoignages .coach__apropos__img__button {
+  background-color: #0077b6;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+#coach .coach__apropos__img__button:hover, #programmes .coach__apropos__img__button:hover, #temoignages .coach__apropos__img__button:hover {
+  background-color: #f7931e;
+  transition: all ease-in 0.2s;
+}
+#coach .coach__apropos__img__container, #programmes .coach__apropos__img__container, #temoignages .coach__apropos__img__container {
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+}
+#coach .coach__apropos__img__container img, #programmes .coach__apropos__img__container img, #temoignages .coach__apropos__img__container img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+#coach .coach__apropos__img__container img:hover, #programmes .coach__apropos__img__container img:hover, #temoignages .coach__apropos__img__container img:hover {
+  transform: scale(1.2);
+}
+#coach .coach__apropos__text h3, #programmes .coach__apropos__text h3, #temoignages .coach__apropos__text h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+#coach .coach__apropos__text p, #programmes .coach__apropos__text p, #temoignages .coach__apropos__text p {
+  padding-inline: 50px;
+  text-align: center;
+}
+
+#programmes {
+  display: flex;
+  flex-direction: column;
+}
+#programmes .section__container h2 {
+  flex-wrap: nowrap;
+}
+#programmes .section__container hr {
+  width: 70%;
+}
+#programmes .programmes__coach {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 20px;
+}
+#programmes .programmes__coach__prog {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+#programmes .programmes__coach__prog__img {
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+}
+#programmes .programmes__coach__prog__img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+#programmes .programmes__coach__prog__img img:hover {
+  transform: scale(1.2);
+}
+#programmes .programmes__coach__prog__text h3 {
+  font-size: 22px;
+  margin-top: 0.5rem;
+}
+#programmes .programmes__coach__prog__text p {
+  margin-bottom: 0.5rem;
+}
+#programmes .programmes__coach__prog__text a {
+  color: #0077b6;
+  text-decoration: none;
+  font-size: 14px;
+}
+#programmes .programmes__coach__prog__text a:hover {
+  color: #f7931e;
+}
+#programmes .programmes__coach__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#programmes .programmes__coach__button__item {
+  background-color: #0077b6;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  width: 50%;
+}
+#programmes .programmes__coach__button__item:hover {
+  background-color: #f7931e;
+  transition: all ease-in 0.2s;
+}
+
+.banner.join {
+  height: 500px;
+}
+.banner.join h2 {
+  font-size: 35px;
+}
+.banner.join p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 30px #000;
+  text-align: center;
+}
+.banner.join a:hover {
+  background-color: #0077b6;
+  transition: all ease-in 0.3s;
+  border: 1px #0077b6 solid;
+}
+
+/*# sourceMappingURL=style.css.map */
