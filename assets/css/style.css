@@ -154,7 +154,7 @@ a {
 }
 
 #coach, #programmes, #temoignages {
-  padding: 50px 20px;
+  padding: 25px 20px;
 }
 #coach .section__container, #programmes .section__container, #temoignages .section__container {
   display: flex;
