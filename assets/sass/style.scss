@@ -458,6 +458,13 @@ footer{
       & span{
         color: $secondary-color;
       }
+      & p{
+        & a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    
     }
   }
   & .footer__reseaux{

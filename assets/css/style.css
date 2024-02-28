@@ -424,6 +424,10 @@ footer .footer__infos__cadre {
 footer .footer__infos__cadre span {
   color: #f7931e;
 }
+footer .footer__infos__cadre p a {
+  text-decoration: none;
+  color: white;
+}
 footer .footer__reseaux h2 {
   margin-bottom: 0.5rem;
 }
