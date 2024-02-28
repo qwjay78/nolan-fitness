@@ -340,3 +340,167 @@ a{
     border: 1px $primary-color solid;
   }
 }
+
+
+// témoignages
+
+.slider-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 25px 20px;
+}
+
+.testimonial {
+  display: none;
+  text-align: center;
+  width: 60%; 
+  margin: 0 auto; 
+  transition: transform 0.5s ease;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.review {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.client-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.program {
+  font-style: italic;
+  color: #555;
+}
+
+.active {
+  display: block;
+}
+.temoignages__fleche-gauche{
+  background-color: $secondary-color;
+  border-radius: 100%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  border: none;
+  
+}
+.temoignages__fleche-droite{
+  background-color: $primary-color;
+  border-radius: 100%;
+  color: white;
+  font-size: 16px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border: none;
+  
+}
+.temoignages__fleches{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+// instagram
+
+.banner.instagram{
+  height: 200px;
+  & a{
+    color: white;
+  }
+}
+
+// footer
+footer{
+  background-color: #1C2229;
+  display: flex;
+  justify-content: space-around;
+  padding: 6rem 8rem;
+  color: white;
+  & .footer__infos{
+    &__logo{
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.2rem;
+      & img{
+        height: 30px;
+        width: 30px;
+      }
+    }
+    & p{
+      margin-bottom: 2rem;
+    }
+    &__cadre{
+      border: 1px white solid;
+      padding: 2rem;
+      width: 500px;
+      background-color: #485059;
+      & span{
+        color: $secondary-color;
+      }
+    }
+  }
+  & .footer__reseaux{
+    & h2{
+      margin-bottom: 0.5rem;
+    }
+    &__grp{
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      margin-bottom: 3rem;
+    }
+    & a{
+      color: white;
+    }
+    & hr{
+      width: 400px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    }
+    & .up{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      & i{
+        border-radius: 100%;
+        border: 1px solid white;
+        padding: 1rem 1rem;
+      }
+    }
+  }
+}
+
+// copyright
+.copyright{
+  padding: 0.5rem;
+  text-align: center;
+  & p{
+    color: #555;
+    font-size: 14px;
+    & span{
+      color: $primary-color;
+    }
+  }
+}
