@@ -24,7 +24,7 @@
       text-shadow: 0 0 10px #000;
     }
     }
-    &__button{
+    &__button, .apropos__texte__boutons{
       display: inline-block;
       padding: 10px 20px;
       background-color: $secondary-color;
@@ -33,6 +33,7 @@
       color: black;
       border: 1px solid $secondary-color;
       cursor: pointer; 
+      transition: all ease-in .2s;
       &:hover{
         color: #fff;
       }

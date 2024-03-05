@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../includes/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->close();
 
     if (password_verify($mot_de_passe, $hashed_password)) {
-        // L'utilisateur est connecté avec succès. Vous pouvez stocker des informations de session ici si nécessaire.
+        
         echo "Connecté avec succès! Bienvenue, $prenom $nom!";
     } else {
         echo "Échec de la connexion. Vérifiez vos informations d'identification.";

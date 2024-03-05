@@ -117,6 +117,10 @@ a {
   color: whitesmoke;
 }
 
+.menu__current-page {
+  color: #0077b6;
+}
+
 .banner {
   position: relative;
   width: 100%;
@@ -142,7 +146,7 @@ a {
   margin-bottom: 20px;
   text-shadow: 0 0 10px #000;
 }
-.banner__button {
+.banner__button, .banner .apropos__texte__boutons {
   display: inline-block;
   padding: 10px 20px;
   background-color: #f7931e;
@@ -151,17 +155,18 @@ a {
   color: black;
   border: 1px solid #f7931e;
   cursor: pointer;
+  transition: all ease-in 0.2s;
 }
-.banner__button:hover {
+.banner__button:hover, .banner .apropos__texte__boutons:hover {
   color: #fff;
 }
-.banner__button.secondary {
+.banner__button.secondary, .banner .apropos__texte__boutons.secondary {
   border: 1px whitesmoke solid;
   color: whitesmoke;
   background-color: transparent;
   text-shadow: 0 0 10px #000;
 }
-.banner__button.secondary:hover {
+.banner__button.secondary:hover, .banner .apropos__texte__boutons.secondary:hover {
   color: #f7931e;
 }
 
@@ -766,8 +771,74 @@ footer .footer__reseaux .up i {
 }
 
 .banner.contact {
-  height: 400px;
+  height: 500px;
   background-color: #f7931e;
+}
+
+.banner.contact h2 {
+  text-shadow: none;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+.banner.contact p {
+  margin-bottom: 2rem;
+}
+
+.apropos {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  gap: 2rem;
+}
+.apropos__image {
+  flex-basis: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 550px;
+}
+.apropos__image img {
+  width: 100%;
+  object-fit: cover;
+  height: 550px;
+  transition: transform 0.5s ease-in-out;
+}
+.apropos__image img:hover {
+  transform: scale(1.2);
+}
+.apropos__texte {
+  flex-basis: 50%;
+}
+.apropos__texte h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+.apropos__texte h2 span {
+  color: #f7931e;
+}
+.apropos__texte span {
+  color: #0077b6;
+  font-weight: 500;
+}
+.apropos__texte__boutons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.apropos__texte__boutons .banner__button.secondary {
+  border: 2px solid #0077b6;
+  text-shadow: none;
+  color: #0077b6;
+  font-weight: 500;
+  transition: all ease-in 0.2s;
+}
+.apropos__texte__boutons .banner__button.secondary:hover {
+  color: #f7931e;
+  border: 2px solid #f7931e;
+}
+
+.banner.titles h2 {
+  font-size: 3.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
