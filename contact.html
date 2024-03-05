@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/c402522f6e.js"
       crossorigin="anonymous"
     ></script>
-    <title>Nolan Fitness - Connexion Espace Client</title>
+    <title>Contact</title>
   </head>
   <body>
     <!-- MENU -->
@@ -48,7 +48,7 @@
             </li>
           </ul>
         </li>
-        <li class="menu__list__item"><a href="contact.html">Contact</a></li>
+        <li class="menu__list__item menu__current-page"><a href="contact.html">Contact</a></li>
         <li class="menu__list__item has-dropdown last-item">
           <a href="connexion.html">Espace Client</a>
           <i class="fa-solid fa-chevron-down"></i>
@@ -65,45 +65,22 @@
       </ul>
     </nav>
 
-    <!-- BANNER -->
-    <section class="banner connexion">
-      <img src="./assets/images/banner.jpg" alt="Banner" />
-      <div class="banner__content">
-        <h2>Je crée mon compte client</h2>
-        <!-- form -->
-        <form class="form-new">
-          <p class="title">Nouveau compte</p>
-          <p class="message">
-            Je crée mon compte et j'accède à mon espace client !
-          </p>
-         
-            <label>
-              <input required="" placeholder="" type="text" class="input" />
-              <span>Prénom</span>
-            </label>
+   <!-- form -->
 
-            <label>
-              <input required="" placeholder="" type="text" class="input" />
-              <span>Nom</span>
-            </label>
-        
-
-          <label>
-            <input required="" placeholder="" type="email" class="input" />
-            <span>Adresse mail</span>
-          </label>
-
-          <label>
-            <input required="" placeholder="" type="password" class="input" />
-            <span>Mot de passe</span>
-          </label>
-          <button class="submit">Créer mon compte</button>
-          <p class="signin">
-            J'ai déjà un compte ? <a href="connexion.html">Me connecter</a>
-          </p>
+   <section class="banner contact">
+    <div class="banner__content">
+        <form class="form-contact">
+            <div class="title">Nous contacter !</div>
+            <div class="flex">
+            <input type="text" placeholder="Nom & Prénom" class="input">
+            <input type="text" placeholder="Adresse mail" class="input">
+            </div>
+            <textarea placeholder="Votre message"></textarea>
+             
+            <button>Envoyer</button>
         </form>
-      </div>
-    </section>
+    </div>
+  </section>
     <!-- footer -->
 
     <footer>
