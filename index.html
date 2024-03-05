@@ -29,16 +29,20 @@
           <a href="index.html">Accueil</a>
         </li>
         <li class="menu__list__item has-dropdown">
-          <a href="#">Présentation</a>
+          <div class="flex-menu">
+          <h4>Présentation</h4>
           <i class="fa-solid fa-chevron-down"></i>
+          </div>
           <ul class="menu__dropdown">
             <li class="menu__list__item drop"><a href="#">Le coach</a></li>
             <li class="menu__list__item drop"><a href="#">Les services</a></li>
           </ul>
         </li>
         <li class="menu__list__item has-dropdown">
-          <a href="#">Programmes d'entraînement</a>
+          <div class="flex-menu">
+         <h4> Programmes d'entraînement </h4>
           <i class="fa-solid fa-chevron-down"></i>
+          </div>
           <ul class="menu__dropdown">
             <li class="menu__list__item drop">
               <a href="#">Programmes du coach</a>
@@ -48,19 +52,9 @@
             </li>
           </ul>
         </li>
-        <li class="menu__list__item"><a href="contact.html">Contact</a></li>
-        <li class="menu__list__item has-dropdown last-item">
-          <a href="connexion.html">Espace Client</a>
-          <i class="fa-solid fa-chevron-down"></i>
-          <ul class="menu__dropdown">
-            <li class="menu__list__item drop"><a href="#">Profil</a></li>
-            <li class="menu__list__item drop">
-              <a href="#">Mes réservations</a>
-            </li>
-            <li class="menu__list__item drop">
-              <a href="#">Suivi des progrès</a>
-            </li>
-          </ul>
+        <li class="menu__list__item"><a href="./pages/contact.html">Contact</a></li>
+        <li class="menu__list__item last-item">
+          <a href="./pages/connexion.html">Espace Client</a>
         </li>
       </ul>
     </nav>
@@ -71,7 +65,7 @@
       <div class="banner__content">
         <h2>Chaque effort vous rapproche de votre objectif</h2>
         <a href="#" class="banner__button">Votre Coach</a>
-        <a href="#" class="banner__button secondary">Me contacter</a>
+        <a href="./pages/contact.html" class="banner__button secondary">Me contacter</a>
       </div>
     </section>
 

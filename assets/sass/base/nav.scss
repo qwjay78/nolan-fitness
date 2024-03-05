@@ -1,0 +1,107 @@
+// nav
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 20px;
+      & img{
+          width: 3rem;
+      }
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 3rem;
+      & h4{
+        font-family: 'Poppins', arial;
+        font-size: 1em;
+        font-weight: normal;
+      }
+      &__item {
+        display: block;
+        padding: 0.5rem;
+        position: relative;
+        background-color: white;
+        &.drop{
+          & a{
+            font-size: 14px;
+            font-family: 'Poppins', arial;
+          }
+        }
+        & a {
+          text-decoration: none;
+          color: black;
+          &:hover{
+              color: $secondary-color;
+            }
+        }
+        &.has-dropdown {
+          &:hover .menu__dropdown {
+            display: block;
+          }
+        }
+      }
+    }
+    &__current-page{
+      & a{
+          color: $primary-color;
+      }
+    }
+    & i{
+      font-size: 12px;
+      padding-left: 5px;
+      color: $primary-color;
+    }
+  }
+  
+  .flex-menu{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  
+  }
+  
+  // dropdown
+  .menu__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  //   dernier bouton
+  
+  .last-item {
+    background-color: $primary-color;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    & a {
+      color: white;
+    }
+  }
+  
+  .menu__list__item.has-dropdown.last-item{
+    .menu__dropdown{
+      .menu__list__item.drop{
+        a{
+          color: #000;
+          &:hover{
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+    & i{
+      color: whitesmoke;
+    }
+  }
