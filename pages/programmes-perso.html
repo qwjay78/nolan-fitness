@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/c402522f6e.js"
       crossorigin="anonymous"
     ></script>
-    <title>Nolan Fitness - Connexion Espace Client</title>
+    <title>Programmes personnalisés</title>
   </head>
   <body>
     <!-- MENU -->
@@ -34,18 +34,18 @@
           <i class="fa-solid fa-chevron-down"></i>
           </div>
           <ul class="menu__dropdown">
-            <li class="menu__list__item drop"><a href="../pages/coach.html">Le coach</a></li>
+            <li class="menu__list__item drop "><a href="../pages/coach.html">Le coach</a></li>
             <li class="menu__list__item drop"><a href="../pages/services.html">Les services</a></li>
           </ul>
         </li>
         <li class="menu__list__item has-dropdown">
           <div class="flex-menu">
-         <h4> Programmes d'entraînement </h4>
+         <h4 class="menu__current-page"> Programmes d'entraînement </h4>
           <i class="fa-solid fa-chevron-down"></i>
           </div>
           <ul class="menu__dropdown">
             <li class="menu__list__item drop">
-              <a href="../pages/programmes.html">Programmes du coach</a>
+                <a href="../pages/programmes.html">Programmes du coach</a>
             </li>
             <li class="menu__list__item drop">
               <a href="../pages/programmes-perso.html">Programmes personnalisés</a>
@@ -59,45 +59,31 @@
       </ul>
     </nav>
 
-    <!-- BANNER -->
-    <section class="banner connexion">
-      <img src="../assets/images/banner.jpg" alt="Banner" />
+
+<!-- BANNER -->
+    <section class="banner titles">
+      <img src="../assets/images/banner-prog-pers.jpg" alt="Banner" />
       <div class="banner__content">
-        <h2>Je crée mon compte client</h2>
-        <!-- Form -->
-        <form class="form-new" action="../scripts/register.php" method="post">
-          <p class="title">Nouveau compte</p>
-          <p class="message">
-            Je crée mon compte et j'accède à mon espace client !
-          </p>
-         
-          <label>
-            <input required="" placeholder="" type="text" class="input" name="prenom" />
-            <span>Prénom</span>
-          </label>
-
-          <label>
-            <input required="" placeholder="" type="text" class="input" name="nom" />
-            <span>Nom</span>
-          </label>
-
-          <label>
-            <input required="" placeholder="" type="email" class="input" name="email" />
-            <span>Adresse mail</span>
-          </label>
-
-          <label>
-            <input required="" placeholder="" type="password" class="input" name="mot_de_passe" />
-            <span>Mot de passe</span>
-          </label>
-          
-          <button class="submit" type="submit">Créer mon compte</button>
-          <p class="signin">
-            J'ai déjà un compte ? <a href="../pages/connexion.html">Me connecter</a>
-          </p>
-        </form>
+        <h2>Programmes personnalisés</h2>
       </div>
     </section>
+   <!-- programmes-->
+
+<section class="apropos prog">
+    <div class="apropos__image">
+        <img src="../assets/images/prog-perso.jpg" alt="Programmes personnalisés">
+    </div>
+    <div class="apropos__texte">
+        <h2>🤸 Mes programmes personnalisés<span> |</span> Nolan Fitness</h2>
+        <p>Chez <span>Nolan Fitness</span>, nous comprenons que chaque parcours fitness est unique. Si nos programmes standards ne correspondent pas à 100% à vos besoins, ne vous inquiétez pas. Nous offrons la possibilité de créer un programme entièrement sur mesure, conçu spécialement pour vous.
+            <br><br>
+            <a class="a-contact" href="../pages/contact.html">Contactez-nous </a> dès aujourd'hui pour discuter de vos objectifs, de vos préférences et de vos contraintes. Notre équipe dévouée travaillera en étroite collaboration avec vous pour élaborer un programme <span>personnalisé</span> qui vous mènera vers le <span>succès</span>. Obtenez un <span>devis</span> dès maintenant et commencez votre voyage vers une meilleure <span>santé</span> et une meilleure forme physique.</p>
+           <div class="apropos__texte__boutons">
+            <a href="#" class="banner__button">Mes programmes standards</a>
+            <a href="../pages/contact.html" class="banner__button secondary">Je demande un devis</a>
+          </div>
+    </div>
+</section>
      <!-- footer -->
 
   <footer>

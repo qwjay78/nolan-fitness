@@ -1,6 +1,6 @@
 .apropos{
     display: flex;
-    padding: 2rem;
+    padding: 3rem;
     align-items: center;
     gap: 2rem;
     &__image{
@@ -53,5 +53,20 @@
 .banner.titles{
     h2{
         font-size: 3.5rem;
+    }
+}
+
+// page programmes perso
+
+.apropos.prog{
+    flex-direction: row-reverse;
+    .a-contact{
+        text-decoration: none;
+        color: $secondary-color;
+        font-weight: 500;
+    }
+    .apropos__texte__boutons{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 }
