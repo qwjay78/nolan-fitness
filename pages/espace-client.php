@@ -11,50 +11,8 @@ if (!isset($_SESSION['client_id'])) {
     exit(); // Assurez-vous d'arrêter l'exécution du script après la redirection
 }
 
-// Vérifier si un fichier a été téléchargé
-if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === 0) {
-    $uploadsDirectory = '../membres/avatars/';
-    $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-
-    // Obtenir l'extension du fichier téléchargé
-    $fileExtension = strtolower(pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION));
-
-    // Vérifier si l'extension est valide
-    if (in_array($fileExtension, $allowedExtensions)) {
-        // Générer un nom de fichier unique
-        $newFileName = $_SESSION['client_id'] . '_' . uniqid() . '.' . $fileExtension;
-
-        // Déplacer le fichier téléchargé vers le répertoire des avatars
-        $destination = $uploadsDirectory . $newFileName;
-        if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
-            // Mettre à jour le chemin de l'avatar dans la base de données
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            $updateAvatar = $conn->prepare('UPDATE clients SET avatar = ? WHERE id = ?');
-            $updateAvatar->bind_param('si', $newFileName, $_SESSION['client_id']);
-            $updateAvatar->execute();
-            $updateAvatar->close();
-            $conn->close();
-
-            // Stocker le nom du fichier de l'image dans une variable de session
-            $_SESSION['avatar'] = $newFileName;
-
-            // Rediriger vers la page d'espace client avec succès
-            header('Location: ./espace-client.php?id=' . $_SESSION['client_id']);
-            exit();
-        } else {
-            $msg = "Une erreur s'est produite lors du téléchargement de l'avatar.";
-        }
-    } else {
-        $msg = "Votre photo de profil doit être au format jpg, jpeg, png ou gif.";
-    }
-}
+include('../includes/traitement-espace-client.php');
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -131,7 +89,7 @@ if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === 0) {
    <!-- BANNER -->
    <section class="banner">
       <img src="../assets/images/banner.jpg" alt="Banner" />
-      <div class="bannercontent">
+      <div class="banner__content">
         <h2>Espace Client | Nolan Fitness</h2>
       </div>
     </section>
@@ -139,8 +97,12 @@ if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === 0) {
     <!-- message -->
      
     <section class="message-espace">
-    <p>Bienvenue <span>  <?php echo $_SESSION['prenom']; ?> </span> !</p>
-    <a href="../scripts/logout.php">Déconnexion</a>
+      <div>
+        <p>Bienvenue  <span>  <?php echo "$prenomMaj"; ?> </span> !</p>
+      </div>
+      <div>
+        <a href="../scripts/logout.php">Déconnexion</a>
+      </div>
   
     </section>
 
@@ -157,32 +119,110 @@ if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === 0) {
         <form class="coach__apropos__img" method="POST" action="espace-client.php" enctype="multipart/form-data">
           <div class="coach__apropos__img__container">
           <?php
-          // Vérifier si l'utilisateur a un avatar
           if (!empty($_SESSION['avatar'])) {
-              // Afficher l'avatar avec l'extension de fichier
               echo '<img id="profile-image" src="../membres/avatars/' . $_SESSION['avatar'] . '" alt="profile picture" />';
           } else {
-              // Afficher l'avatar par défaut
+              // avatar par défaut
               echo '<img id="profile-image" src="../assets/images/profile.jpg" alt="profile picture" />';
           }
           ?>
           </div>
-          <!-- Input de type file caché pour télécharger la photo de profil -->
-          <input type="file" name="avatar" id="profile-upload" accept="image/*">
-          <input type="submit" value="Modifier la photo de profil">
+          <!-- boutons pour télécharger la photo de profil -->
+
+          <!-- bouton upload -->
+          <label for="profile-upload" class="Documents-btn">
+  <span class="folderContainer">
+  <svg
+      class="fileBack"
+      width="146"
+      height="113"
+      viewBox="0 0 146 113"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+        fill="url(#paint0_linear_117_4)"
+      ></path>
+      <defs>
+        <linearGradient
+          id="paint0_linear_117_4"
+          x1="0"
+          y1="0"
+          x2="72.93"
+          y2="95.4804"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#a040fd"></stop>
+          <stop offset="1" stop-color="#5f41f3"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+    <svg
+      class="filePage"
+      width="88"
+      height="99"
+      viewBox="0 0 88 99"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+      <defs>
+        <linearGradient
+          id="paint0_linear_117_6"
+          x1="0"
+          y1="0"
+          x2="81"
+          y2="160.5"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="white"></stop>
+          <stop offset="1" stop-color="#686868"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <svg
+      class="fileFront"
+      width="160"
+      height="79"
+      viewBox="0 0 160 79"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+        fill="url(#paint0_linear_117_5)"
+      ></path>
+      <defs>
+        <linearGradient
+          id="paint0_linear_117_5"
+          x1="38.7619"
+          y1="8.71323"
+          x2="66.9106"
+          y2="82.8317"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#a040fd"></stop>
+          <stop offset="1" stop-color="#5251f2"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </span>
+  <p class="text">Choisir une photo</p>
+</label>
+<input type="file" name="avatar" id="profile-upload" accept="image/*" style="display: none;">
+
+<!-- bouton 2 -->
+          <input type="submit" name="enregistrer_modifications" value="Enregistrer la photo de profil">
         </form>
 
-
-        <div class="coach__apropos__text">
-          <h3>A propos de Nolan Fitness</h3>
-          <ul class="infos-profil">
-            <li class="infos-profil__list"><span> Prénom : <?php echo $_SESSION['prenom']; ?></span></li>
-            <li class="infos-profil__list"> <span>Nom : <?php echo $_SESSION['nom']; ?></span></li>
-            <li class="infos-profil__list"> <span>E-mail : <?php echo $_SESSION['email'];?></span></li>
-            <li class="infos-profil__list">Sexe <span>:</span></li>
-            <li class="infos-profil__list">Poids <span>:</span></li>
-            <li class="infos-profil__list">Programme <span>:</span></li>
-          </ul>
+          <!-- infos profil -->
+        <div class="coach__apropos__text infos-profil">
+          <h3>A propos de moi</h3>
+          <?php
+          include('../includes/infos-profil.php');
+          ?>
         </div>
       </div>
     </section>

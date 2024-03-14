@@ -1026,12 +1026,237 @@ footer .footer__reseaux .up i {
 }
 .message-espace {
   background-color: #0077b6;
-  height: 3rem;
+  height: 4rem;
   width: 100%;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+}
+.message-espace a {
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  background-color: white;
+  color: #0077b6;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.message-espace a:hover {
+  background-color: rgb(160, 183, 200);
+  color: white;
+}
+.message-espace span {
+  color: #f7931e;
+}
+
+#coach.profil .coach__apropos {
+  flex-direction: row;
+  gap: 8rem;
+}
+
+.coach__apropos__text.infos-profil form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  margin-top: 3rem;
+}
+.coach__apropos__text.infos-profil form span {
+  color: #0077b6;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.coach__apropos__text.infos-profil form h4 {
+  font-weight: normal;
+}
+.coach__apropos__text.infos-profil form h4 span {
+  font-weight: 500;
+  padding-right: 1.1rem;
+}
+
+input[type=file][name=avatar]#profile-upload {
+  display: none;
+}
+
+.Documents-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
+  border: none;
+  padding: 0px 17px;
+  border-radius: 5px;
+  background: linear-gradient(to left bottom, #0077b6, #3386ef, #f7931e);
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.Documents-btn .folderContainer {
+  width: 40px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.Documents-btn .folderContainer .fileBack {
+  z-index: 1;
+  width: 80%;
+  height: auto;
+}
+.Documents-btn .folderContainer .filePage {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+}
+.Documents-btn .folderContainer .fileFront {
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.95;
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+}
+.Documents-btn .text {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.Documents-btn:hover .folderContainer .filePage {
+  transform: translateY(-5px);
+}
+
+.Documents-btn:hover .folderContainer .fileFront {
+  transform: rotateX(30deg);
+}
+
+.coach__apropos__text.infos-profil .radio-buttons-container {
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+}
+.coach__apropos__text.infos-profil .radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.coach__apropos__text.infos-profil .radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.coach__apropos__text.infos-profil .radio-button__label {
+  display: inline-block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.coach__apropos__text.infos-profil .radio-button__custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #f7931e;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.coach__apropos__text.infos-profil .radio-button__input:checked + .radio-button__label .radio-button__custom {
+  transform: translateY(-50%) scale(0.9);
+  border: 5px solid #0077b6;
+  background-color: #0077b6;
+}
+.coach__apropos__text.infos-profil .radio-button__input:checked + .radio-button__label {
+  color: #4c8bf5;
+}
+.coach__apropos__text.infos-profil .radio-button__label:hover .radio-button__custom {
+  transform: translateY(-50%) scale(1.2);
+  border-color: #0077b6;
+  box-shadow: 0 0 10px #0077b6;
+}
+.coach__apropos__text.infos-profil .form-element {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+}
+.coach__apropos__text.infos-profil .form-element input {
+  background-color: white;
+  max-width: 160px;
+  height: 35px;
+  padding: 10px;
+  border: 2px solid #f7931e;
+  border-radius: 5px;
+}
+.coach__apropos__text.infos-profil .form-element input:focus {
+  color: #0077b6;
+  background-color: whitesmoke;
+  outline-color: #0077b6;
+  box-shadow: -3px -3px 15px #0077b6;
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+.coach__apropos__text.infos-profil .select-programme {
+  background-color: white;
+  max-width: 200px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #f7931e;
+  border-radius: 5px;
+  color: black;
+}
+.coach__apropos__text.infos-profil .select-programme:focus {
+  background-color: whitesmoke;
+  color: black;
+  outline-color: #0077b6;
+  box-shadow: -3px -3px 15px #0077b6;
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+
+input[type=submit][name=enregistrer_modifications] {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.3s;
+}
+input[type=submit][name=enregistrer_modifications]:hover {
+  background: linear-gradient(90deg, #0077b6 0%, #f7931e 100%);
+}
+input[type=submit][name=enregistrer_modifications]:active {
+  transform: translate(0em, 0.2em);
+}
+
+.infos-profil ul {
+  margin-top: 3rem;
+  line-height: 2rem;
+}
+.infos-profil ul li {
+  list-style: none;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+.infos-profil ul li span {
+  font-weight: 500;
+  color: #0077b6;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
