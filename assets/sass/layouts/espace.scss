@@ -248,7 +248,24 @@ input[type="submit"][name="enregistrer_modifications"] {
     padding: 0.5em 2em;
     border: transparent;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    background: dodgerblue;
+    background: $primary-color;
+    color: white;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+    &:hover {
+      background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+    }
+    &:active {
+      transform: translate(0em, 0.2em);
+    }
+  }
+
+  input[type="submit"][name="modifier_informations"]{
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: $primary-color;
     color: white;
     border-radius: 4px;
     transition: background 0.3s, transform 0.3s;

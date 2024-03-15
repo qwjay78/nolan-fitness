@@ -1233,7 +1233,7 @@ input[type=submit][name=enregistrer_modifications] {
   padding: 0.5em 2em;
   border: transparent;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  background: dodgerblue;
+  background: #0077b6;
   color: white;
   border-radius: 4px;
   transition: background 0.3s, transform 0.3s;
@@ -1242,6 +1242,23 @@ input[type=submit][name=enregistrer_modifications]:hover {
   background: linear-gradient(90deg, #0077b6 0%, #f7931e 100%);
 }
 input[type=submit][name=enregistrer_modifications]:active {
+  transform: translate(0em, 0.2em);
+}
+
+input[type=submit][name=modifier_informations] {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: #0077b6;
+  color: white;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.3s;
+}
+input[type=submit][name=modifier_informations]:hover {
+  background: linear-gradient(90deg, #0077b6 0%, #f7931e 100%);
+}
+input[type=submit][name=modifier_informations]:active {
   transform: translate(0em, 0.2em);
 }
 

@@ -86,7 +86,7 @@ if (!isset($genre)) {
     </ul>
     <!-- bouton-->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <input type="submit" name="enregistrer_modifications" value="Modifier mes informations">
+        <input type="submit" name="modifier_informations" value="Modifier mes informations">
     </form>
 <?php
 }
