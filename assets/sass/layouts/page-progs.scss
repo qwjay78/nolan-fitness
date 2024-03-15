@@ -22,10 +22,10 @@
 & .card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
-    height: 200px;
+    height: auto;
     width: 60%;
     border-radius: 10px;
     color: white;
@@ -34,12 +34,14 @@
 
 
 & p.tip {
-    font-size: 1em;
+    font-size: .6em;
     font-weight: 700;
 }
 
-& p.second-text {
-    font-size: .7em;
+& p.second-text, li {
+    font-size: .5em;
+    font-family: 'poppins',Arial, Helvetica, sans-serif;
+    list-style: none;
 }
 
 &:hover {

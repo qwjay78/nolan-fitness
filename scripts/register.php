@@ -17,7 +17,195 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ssss", $prenom, $nom, $email, $mot_de_passe);
 
     if ($stmt->execute()) {
-        echo "Compte créé avec succès!";
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png" />
+    <script
+        src="https://kit.fontawesome.com/c402522f6e.js"
+        crossorigin="anonymous"
+    ></script>
+    <title>Nolan Fitness - Connexion Espace Client</title>
+</head>
+<body>
+<!-- MENU -->
+<nav class="menu">
+    <div class="menu__logo">
+        <img src="../assets/images/logo.png" alt="Nolan Fitness" />
+        <h1 class="menu__logo__title">Nolan Fitness</h1>
+    </div>
+    <ul class="menu__list">
+        <li class="menu__list__item">
+            <a href="../index.php">Accueil</a>
+        </li>
+        <li class="menu__list__item has-dropdown">
+            <div class="flex-menu">
+                <h4>Présentation</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="menu__dropdown">
+                <li class="menu__list__item drop"><a href="../pages/coach.php">Le coach</a></li>
+                <li class="menu__list__item drop"><a href="../pages/services.php">Les services</a></li>
+            </ul>
+        </li>
+        <li class="menu__list__item has-dropdown">
+            <div class="flex-menu">
+                <h4> Programmes d'entraînement </h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="menu__dropdown">
+                <li class="menu__list__item drop">
+                    <a href="../pages/programmes.php">Programmes du coach</a>
+                </li>
+                <li class="menu__list__item drop">
+                    <a href="../pages/programmes-perso.php">Programmes personnalisés</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu__list__item"><a href="../pages/contact.php">Contact</a></li>
+        <li class="menu__list__item last-item">
+            <?php
+            // Vérifier si l'utilisateur est connecté
+            if (isset($_SESSION['client_id'])) {
+                // Utilisateur connecté : lien vers l'espace client
+                echo '<a href="../pages/espace-client.php">Espace Client</a>';
+            } else {
+                // Utilisateur non connecté : lien vers la page de connexion
+                echo '<a href="../pages/connexion.php">Espace Client</a>';
+            }
+            ?>
+
+        </li>
+    </ul>
+</nav>
+
+<!-- BANNER -->
+<section class="banner connexion">
+    <img src="../assets/images/banner.jpg" alt="Banner" />
+    <div class="banner__content">
+        <h2>Connexion à mon espace client</h2>
+
+        <!-- message -->
+
+        <section class="message-espace">
+            <div>
+                <p>Compte crée avec succès ! Veuillez vous connecter !</p>
+            </div>
+
+        </section>
+
+        <!-- Form -->
+        <form class="form" action="../scripts/login.php" method="post">
+            <p class="title">Mon espace client</p>
+
+            <div class="input-container">
+                <input
+                        required=""
+                        placeholder="Adresse mail"
+                        type="email"
+                        class="input"
+                        name="email"
+                />
+                <span>
+                  <svg
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+            </div>
+
+            <div class="input-container">
+                <input
+                        required=""
+                        placeholder="Mot de passe"
+                        type="password"
+                        class="input"
+                        name="mot_de_passe"
+                />
+                <span>
+                  <svg
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                    ></path>
+                    <path
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+            </div>
+
+            <button class="submit" type="submit">Connexion</button>
+            <p class="signup-link">
+                Pas de compte ?
+                <a href="../pages/new-account.php">Créer un nouveau compte</a>
+            </p>
+        </form>
+    </div>
+</section>
+<!-- footer -->
+
+<footer>
+    <div class="footer__infos">
+        <div class="footer__infos__logo">
+            <img src="../assets/images/logo.png" alt="logo">
+            <h2>Nolan Fitness</h2>
+        </div>
+        <p>Nolan Fitness, Coach et sportif de haut niveau certifié</p>
+        <div class="footer__infos__cadre">
+            <p><span>Téléphone :</span> <br> <a href="tel:0123456789">01 23 45 67 89</a> <br> <a href="tel:0199998562">01 99 99 85 62</a></p>
+            <p><span>Mail :</span> <br> <a href="mailto:nolan@fitness.com">Nolan@fitness.com</a></p>
+        </div>
+    </div>
+    <div class="footer__reseaux">
+        <h2>Mes réseaux</h2>
+        <div class="footer__reseaux__grp">
+            <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://fr-fr.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="up">
+            <hr>
+            <a id="scroll-to-top-button" href="#"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
+    </div>
+</footer>
+
+<section class="copyright">
+    <p>Designed & created by <span>©Equipe1</span></p>
+</section>
+</body>
+</html>
+<?php
     } else {
         echo "Erreur lors de la création du compte: " . $stmt->error;
     }

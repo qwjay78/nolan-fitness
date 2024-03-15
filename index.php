@@ -101,17 +101,12 @@ session_start();
         <div class="coach__apropos__text">
           <h3>A propos de Nolan Fitness</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Facilisis leo vel fringilla est ullamcorper eget. Commodo viverra
-            maecenas accumsan lacus vel. Neque viverra justo nec ultrices dui
-            sapien eget. Lacus luctus accumsan tortor Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Facilisis leo vel fringilla est
-            ullamcorper eget. Commodo viverra maecenas accumsan lacus vel. Neque
-            viverra justo nec ultrices dui sapien eget. Lacus luctus accumsan
-            tortor
-          </p>
+        Nolan Fitness incarne la passion, l'engagement et l'expertise dans le domaine du fitness et du bien-être. Avec une carrière dédiée à aider les individus à atteindre leur plein potentiel physique et mental, Nolan s'engage à offrir des programmes d'entraînement personnalisés et des conseils adaptés à chaque client.
+    </p><br>
+    <p>
+        Fort d'une expérience diversifiée et d'une solide formation dans le domaine du fitness, Nolan combine les dernières avancées scientifiques avec une approche holistique pour aider ses clients à atteindre des résultats durables. Que votre objectif soit de perdre du poids, de développer votre musculature ou d'améliorer votre condition physique générale, Nolan vous accompagnera à chaque étape de votre parcours.
+    </p>
+    
         </div>
       </div>
     </section>
@@ -132,9 +127,8 @@ session_start();
           <div class="programmes__coach__prog__text">
             <h3>Lose & Train</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </p>
+        Un programme intensif conçu pour brûler les graisses et renforcer votre corps.
+          </p>
             <a href="./pages/programmes.php#lose">En savoir +</a>
           </div>
         </div>
@@ -146,9 +140,8 @@ session_start();
           <div class="programmes__coach__prog__text">
             <h3>Nutrifit</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </p>
+        Optimisez votre alimentation et votre santé avec Nutrifit. 
+    </p>
             <a href="./pages/programmes.php#nutrifit">En savoir +</a>
           </div>
         </div>
@@ -160,9 +153,8 @@ session_start();
           <div class="programmes__coach__prog__text">
             <h3>Competitor</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </p>
+        Préparez-vous à atteindre vos objectifs sportifs les plus ambitieux avec le programme Competitor. 
+    </p>
             <a href="./pages/programmes.php#competitor">En savoir +</a>
           </div>
         </div>
@@ -179,13 +171,13 @@ session_start();
       <div class="banner__content">
         <h2>Rejoindre la Nolan Team</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore
+            Vous aspirez à un mode de vie sain et actif ? 
+        </p>
+        <p>
+            En tant que membre de la Nolan Team, vous bénéficierez non seulement de programmes d'entraînement efficaces, mais aussi d'un accompagnement personnalisé et d'une motivation continue pour vous aider à repousser vos limites et à atteindre vos objectifs. Que vous soyez novice dans le monde du fitness ou un athlète chevronné, notre équipe est là pour vous aider à réussir.
+        </p>
+        <p>
+            Rejoignez-nous dès aujourd'hui et faites partie d'une communauté dynamique et inspirante dédiée à la santé, au bien-être et à l'épanouissement personnel. Ensemble, nous pouvons atteindre de nouveaux sommets et vivre une vie pleine de vitalité et de bonheur !
         </p>
         <a href="./pages/contact.php" class="banner__button">Me contacter</a>
       </div>

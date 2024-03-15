@@ -1296,10 +1296,10 @@ input[type=submit][name=modifier_informations]:active {
 .cards-prog .card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-  height: 200px;
+  height: auto;
   width: 60%;
   border-radius: 10px;
   color: white;
@@ -1307,11 +1307,13 @@ input[type=submit][name=modifier_informations]:active {
   transition: 400ms;
 }
 .cards-prog .card p.tip {
-  font-size: 1em;
+  font-size: 0.6em;
   font-weight: 700;
 }
-.cards-prog .card p.second-text {
-  font-size: 0.7em;
+.cards-prog .card p.second-text, .cards-prog .card li {
+  font-size: 0.5em;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  list-style: none;
 }
 .cards-prog .card:hover {
   transform: scale(1.1, 1.1);
