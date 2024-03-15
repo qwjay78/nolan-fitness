@@ -1276,4 +1276,57 @@ input[type=submit][name=modifier_informations]:active {
   font-size: 1.1rem;
 }
 
+.cards-prog {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.cards-prog .orange {
+  background-color: #f7931e;
+}
+.cards-prog .blue {
+  background-color: #0077b6;
+}
+.cards-prog .green {
+  background-color: #22c55e;
+}
+.cards-prog .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+  width: 60%;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+.cards-prog .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+.cards-prog .card p.second-text {
+  font-size: 0.7em;
+}
+.cards-prog .card:hover {
+  transform: scale(1.1, 1.1);
+}
+.cards-prog:hover > .card:not(:hover) {
+  filter: blur(2px);
+  transform: scale(0.9, 0.9);
+}
+
+.banner.join.bienvenue p {
+  color: black;
+  font-weight: 500;
+}
+.banner.join.bienvenue p span {
+  color: rgb(7, 67, 146);
+}
+
 /*# sourceMappingURL=style.css.map */

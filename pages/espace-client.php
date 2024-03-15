@@ -230,170 +230,61 @@ include('../includes/traitement-espace-client.php');
     <!-- PROGRAMMES -->
 
     <section id="programmes">
-      <div class="section__container">
-        <hr />
-        <h2>Mes programmes préconçus</h2>
-      </div>
-      <div class="programmes__coach">
-        <!-- prog 1 -->
-        <div class="programmes__coach__prog">
-          <div class="programmes__coach__prog__img">
-            <img src="../assets/images/lose.jpg" alt="Lose & Train" />
-          </div>
-          <div class="programmes__coach__prog__text">
-            <h3>Lose & Train</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </p>
-            <a href="../pages/programmes.php#lose">En savoir +</a>
-          </div>
-        </div>
-        <!-- prog 2 -->
-        <div class="programmes__coach__prog">
-          <div class="programmes__coach__prog__img">
-            <img src="../assets/images/nutrifit.jpg" alt="Nutrifit" />
-          </div>
-          <div class="programmes__coach__prog__text">
-            <h3>Nutrifit</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </p>
-            <a href="../pages/programmes.php#nutrifit">En savoir +</a>
-          </div>
-        </div>
-        <!-- prog 3 -->
-        <div class="programmes__coach__prog">
-          <div class="programmes__coach__prog__img">
-            <img src="../assets/images/competitor.jpg" alt="Competitor" />
-          </div>
-          <div class="programmes__coach__prog__text">
-            <h3>Competitor</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
-            </p>
-            <a href="../pages/programmes.php#competitor">En savoir +</a>
-          </div>
-        </div>
-      </div>
-      <div class="programmes__coach__button">
-        <a class="programmes__coach__button__item" href="../pages/programmes.php"
-          >Voir tous les programmes préconçus</a
-        >
-      </div>
+      <?php 
+        $fileToInclude = '';
+        switch ($programme) {
+            case 'Competitor':
+                $fileToInclude = '../includes/competitor.html';
+                break;
+            case 'Lose & Train':
+                $fileToInclude = '../includes/losetrain.html';
+                break;
+            case 'Nutrifit':
+                $fileToInclude = '../includes/nutrifit.html';
+                break;
+            default:
+                // pas de programme choisi
+                break;
+        }
+
+        // inclure le fichier correspondant au programme
+        if (!empty($fileToInclude) && file_exists($fileToInclude)) {
+            include($fileToInclude);
+        } else {
+            // par défaut
+            echo '';
+        }
+        ?>
     </section>
-    <!-- JOIN US -->
-    <section class="banner join">
-      <img src="../assets/images/team.jpg" alt="Nolan team" />
+    <!-- Conseils coach -->
+    <section class="banner join bienvenue">
+      <img src="../assets/images/conseil.jpg" alt="conseils" />
       <div class="banner__content">
-        <h2>Rejoindre la Nolan Team</h2>
+        <h2>Bienvenue dans la Nolan Team !</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore
+        Cher(e) ami(e), <br><br>
+
+Le voyage vers une meilleure version de vous-même est un chemin parsemé de défis, mais chaque défi surmonté vous rendra plus <span>fort(e)</span>. Que vous ayez choisi <span>Lose & Train</span>, <span>Nutrifit</span> ou <span>Competitor</span>, chaque petit pas vous rapproche de vos objectifs. <br><br>
+
+Rappelez-vous, chaque séance d'entraînement, chaque repas équilibré est un investissement dans votre <span>bien-être futur</span>. Si vous aspirez à aller plus loin, envisagez de réserver une séance avec <span>Nolan Fitness</span> pour un <span>programme personnalisé</span> et un soutien expert. <br><br>
+
+Vous avez déjà franchi la première étape. Maintenant, continuez à avancer, un pas à la fois, vers une vie plus <span>saine</span> et plus <span>épanouie</span>. <br><br>
+
+Avec détermination, <br><br> Nolan Fitness
         </p>
-        <a href="../pages/contact.php" class="banner__button">Me contacter</a>
       </div>
     </section>
 
-    <!-- temoignages -->
+    <!-- Calendly -->
     <section id="temoignages">
       <div class="section__container">
-        <h2>Vos témoignages</h2>
+        <h2>Réserver un coaching</h2>
         <hr>
       </div>
-      <!-- CARTES -->
-      <div class="slider-container">
-        <!-- carte -->
-        <div class="testimonial">
-          <img src="../assets/images/anna.jpg" alt="Anna">
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p class="review">Excellent service! J'ai vraiment apprécié le programme. Hautement recommandé.</p>
-          <p class="client-name">Anna</p>
-          <p class="program">Lose & Train</p>
-        </div>
-        <div class="testimonial">
-          <img src="../assets/images/christelle.jpg" alt="Christelle">
-          <div class="stars">
-            <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-          </div>
-          <p class="review">Coach à l'écoute et programme très complet</p>
-          <p class="client-name">Christelle</p>
-          <p class="program">Nutrifit</p>
-        </div>
-        <div class="testimonial">
-          <img src="../assets/images/dylan.jpg" alt="Dylan">
-          <div class="stars">
-            <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-          </div>
-          <p class="review">Merci à Nolan pour ses conseils précieux. J'ai gagné 10% de muscles.</p>
-          <p class="client-name">Dylan</p>
-          <p class="program">Programme personnalisé</p>
-        </div>
-        <div class="testimonial">
-          <img src="../assets/images/john.jpg" alt="John">
-          <div class="stars">
-            <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-          </div>
-          <p class="review">Je recommande Nolan. 2 ans que je suis ses entraînements, toujours aussi satisfait !</p>
-          <p class="client-name">John</p>
-          <p class="program">Competitor</p>
-        </div>
-        <div class="testimonial">
-          <img src="../assets/images/jodie.jpg" alt="Jodie">
-          <div class="stars">
-            <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-          </div>
-          <p class="review">-20kg grâce au professionnalisme de Nolan ! Merci !!</p>
-          <p class="client-name">Jodie</p>
-          <p class="program">Lose & Train</p>
-        </div>
-        <div class="testimonial">
-          <img src="../assets/images/tom.jpg" alt="Client 1">
-          <div class="stars">
-            <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-          </div>
-          <p class="review">Excellent programme. Merci Nolan Fitness !</p>
-          <p class="client-name">Tom</p>
-          <p class="program">Nutrifit</p>
-        </div>
-        <div class="temoignages__fleches">
-          <button class="temoignages__fleche-gauche"><i class="fa fa-chevron-left"></i></button>
-          <button class="temoignages__fleche-droite"><i class="fa fa-chevron-right"></i></button>
-        </div>
-      </div> 
+    <!-- Début de widget en ligne Calendly -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/nolan-fitness?hide_gdpr_banner=1&primary_color=0077b6" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Fin de widget en ligne Calendly -->
     </section>
 
     <!-- instagram -->
