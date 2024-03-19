@@ -61,6 +61,7 @@
     }
     }
     &__text{
+      flex-basis: 50%;
       & h3{
         text-align: center;
         font-size: 28px;
@@ -73,6 +74,8 @@
     }
   }
   }
+
+  
   
   // PROGRAMMES
   #programmes{
@@ -136,7 +139,7 @@
         text-align: center;
         color: #fff;
         text-decoration: none;
-        width: 50%;
+        width: 35%;
         &:hover{
           background-color: $secondary-color;
           transition: all ease-in 0.2s;
@@ -145,6 +148,7 @@
     }
     }
   }
+
   
   // join us
   .banner.join{
@@ -179,7 +183,6 @@
   .testimonial {
     display: none;
     text-align: center;
-    width: 60%; 
     margin: 0 auto; 
     transition: transform 0.5s ease;
   }
@@ -251,5 +254,54 @@
     height: 200px;
     & a{
       color: white;
+    }
+  }
+
+  // responsive coach
+
+  @media screen and (max-width:965px) {
+    #coach .coach__apropos, #programmes .coach__apropos, #temoignages .coach__apropos{
+      flex-direction: column-reverse;
+    }
+    #coach .coach__apropos__text p, #programmes .coach__apropos__text p, #temoignages .coach__apropos__text p{
+      padding-inline: 0;
+      text-align: initial;
+    }
+  }
+  @media screen and (max-width:440px) {
+    #coach .coach__apropos__img__container, #programmes .coach__apropos__img__container, #temoignages .coach__apropos__img__container, #coach .coach__apropos__img__container img, #programmes .coach__apropos__img__container img, #temoignages .coach__apropos__img__container img, #programmes .programmes__coach__prog__img, #programmes .programmes__coach__prog__img img {
+      width: 280px;
+      height: 280px
+    }
+    #coach .coach__apropos__text h3, #programmes .coach__apropos__text h3, #temoignages .coach__apropos__text h3{
+      font-size: 24px;
+    }
+  }
+
+  // responsive programmes
+
+  @media screen and (max-width:1300px) {
+    #programmes .programmes__coach{
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    #programmes .programmes__coach__button__item{
+      width: 90%;
+    }
+  }
+
+  // banner join
+
+  @media screen and (max-width:700px) {
+    .banner.join{
+      height: 850px;
+    }
+  }
+  @media screen and (max-width:400px) {
+    .banner.join{
+      height: 950px;
     }
   }

@@ -1,16 +1,17 @@
 // nav
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 3rem;
+.menu__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+.menu {
     &__logo {
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      font-size: 20px;
+      font-size: 15px;
       & img{
           width: 3rem;
       }
@@ -61,6 +62,7 @@
       color: $primary-color;
     }
   }
+}
   
   .flex-menu{
     display: flex;
@@ -80,7 +82,7 @@
   
   //   dernier bouton
   
-  .last-item {
+  .menu__container .last-item {
     background-color: $primary-color;
     border: none;
     padding: 0.5rem 1rem;
@@ -90,22 +92,79 @@
     }
   }
   
-  .menu__list__item.has-dropdown.last-item{
-    .menu__dropdown{
-      .menu__list__item.drop{
-        a{
-          color: #000;
-          &:hover{
-            color: $secondary-color;
-          }
-        }
-      }
-    }
-    & i{
-      color: whitesmoke;
-    }
-  }
+
 
   .menu__current-page{
     color: $primary-color;
   }
+
+  .menu .menu-hamburger{
+    display: none;
+    width: 40px;
+    object-fit: cover;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+  }
+
+
+// responsive
+
+@media  screen and (max-width:1300px) {
+  .menu__container{
+  .menu__logo{
+    &__title{
+      font-size: 24px;
+    }
+  }
+  .menu__list{
+    & li{
+      font-size: 15px;
+    }
+  }
+}
+}
+
+@media screen and (max-width:1180px) {
+  .menu__container{
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media screen and (max-width:965px) {
+  .menu__container{
+    gap: 0px;
+    flex-direction: row;
+  }
+  .menu__container .menu__list{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    padding-top: 150px;
+    background-color: white;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1250vh;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+
+  }
+  .menu__list.mobile-menu{
+    margin-left: 0;
+  }
+  .menu .menu-hamburger{
+    display: block;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .menu .menu-hamburger{
+    right: 10px;
+  }
+}
+
+
+

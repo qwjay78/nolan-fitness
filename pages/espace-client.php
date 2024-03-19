@@ -36,11 +36,13 @@ include('../includes/traitement-espace-client.php');
   </head>
   <body>
     <!-- MENU -->
-    <nav class="menu">
-      <div class="menu__logo">
+<div class="menu__container">
+    <div class="menu__logo">
         <img src="../assets/images/logo.png" alt="Nolan Fitness" />
         <h1 class="menu__logo__title">Nolan Fitness</h1>
       </div>
+    <nav class="menu">
+      
       <ul class="menu__list">
         <li class="menu__list__item menu__current-page">
           <a href="../index.php">Accueil</a>
@@ -84,7 +86,9 @@ include('../includes/traitement-espace-client.php');
 
         </li>
       </ul>
+      <img src="../assets/images/hamburger.png" alt="menu hamburger logo" class="menu-hamburger">
     </nav>
+    </div>
 
    <!-- BANNER -->
    <section class="banner">
@@ -327,7 +331,7 @@ Avec détermination, <br><br> Nolan Fitness
   <section class="copyright">
     <p>Designed & created by <span>©Equipe1</span></p>
   </section>
-  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/menu.js"></script>
   <script src="../assets/js/espace.js"></script>
   </body>
 </html>

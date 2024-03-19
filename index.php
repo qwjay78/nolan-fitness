@@ -21,12 +21,17 @@ session_start();
     <title>Nolan Fitness</title>
   </head>
   <body>
-    <!-- MENU -->
-    <nav class="menu">
-      <div class="menu__logo">
+
+  <!-- MENU PRINCIPAL -->
+
+<div class="menu__container">
+    <div class="menu__logo">
         <img src="assets/images/logo.png" alt="Nolan Fitness" />
         <h1 class="menu__logo__title">Nolan Fitness</h1>
       </div>
+
+      <!-- menu -->
+    <nav class="menu">
       <ul class="menu__list">
         <li class="menu__list__item menu__current-page">
           <a href="index.php">Accueil</a>
@@ -70,7 +75,9 @@ session_start();
 
         </li>
       </ul>
+      <img src="./assets/images/hamburger.png" alt="menu hamburger logo" class="menu-hamburger">
     </nav>
+  </div> 
 
     <!-- BANNER -->
     <section class="banner">

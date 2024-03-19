@@ -79,4 +79,33 @@ footer{
       }
     }
   }
+
+  // responsive
+
+  @media screen and (max-width:1300px) {
+    footer{
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;  
+    }
+
+  }
+
+  @media screen and (max-width:600px) {
+    .footer__infos,.footer__reseaux{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+    footer .footer__infos__cadre, footer .footer__infos p{
+      width: 80%;
+    }
+    footer .footer__infos__logo{
+      margin-bottom: 1rem;
+    }
+    footer .footer__reseaux hr{
+      display: none;
+    }
+  }
   
