@@ -103,7 +103,7 @@ session_start();
         <span> Prêt à relever le défi avec Nolan Fitness ? </span>Commencez dès maintenant votre aventure vers une forme physique optimale et une vie plus énergique !
       </p>
       <div class="apropos__texte__boutons">
-        <a href="#" class="banner__button">Mes programmes</a>
+        <a href="../pages/programmes.php" class="banner__button">Mes programmes</a>
         <a href="../pages/contact.php" class="banner__button secondary">Me contacter</a>
       </div>
     </div>

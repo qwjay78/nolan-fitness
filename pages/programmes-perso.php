@@ -93,7 +93,7 @@ session_start();
         <a class="a-contact" href="../pages/contact.php">Contactez-nous </a> dès aujourd'hui pour discuter de vos objectifs, de vos préférences et de vos contraintes. Notre équipe dévouée travaillera en étroite collaboration avec vous pour élaborer un programme <span>personnalisé</span> qui vous mènera vers le <span>succès</span>. Obtenez un <span>devis</span> dès maintenant et commencez votre voyage vers une meilleure <span>santé</span> et une meilleure forme physique.
       </p>
       <div class="apropos__texte__boutons">
-        <a href="#" class="banner__button">Mes programmes standards</a>
+        <a href="../pages/programmes.php" class="banner__button">Mes programmes standards</a>
         <a href="../pages/contact.php" class="banner__button secondary">Je demande un devis</a>
       </div>
     </div>

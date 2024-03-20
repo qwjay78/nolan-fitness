@@ -41,6 +41,7 @@ session_start();
             <li class="menu__list__item drop"><a href="./pages/coach.php">Le coach</a></li>
             <li class="menu__list__item drop"><a href="./pages/services.php">Les services</a></li>
           </ul>
+          <br>
         </li>
         <li class="menu__list__item has-dropdown">
           <div class="flex-menu">
