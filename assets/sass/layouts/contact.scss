@@ -5,7 +5,8 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  width: 900px;
+  width: 100%;
+  max-width: 1000px;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -55,16 +56,36 @@
   cursor: pointer;
 }
 
-.banner.contact{
+.banner.contact {
   height: 500px;
-  background-color: $secondary-color
+  background-color: $secondary-color;
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: initial;
+  }
 }
 
-.banner.contact h2{
-  text-shadow:none ;
+.banner.contact h2 {
+  text-shadow: none;
   font-size: 2.5rem;
   margin-top: 2rem;
 }
-.banner.contact p{
+.banner.contact p {
   margin-bottom: 2rem;
+}
+
+// responsive
+@media screen and (max-width: 500px) {
+  .form-contact {
+    margin-bottom: 2rem;
+    .flex {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .banner.contact {
+    height: 700px;
+  }
 }

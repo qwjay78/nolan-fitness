@@ -1,5 +1,4 @@
 <?php
-// Vérifie si le bouton "Modifier mes informations" a été cliqué
 if (isset($_POST['modifier_informations'])) {
     $_SESSION['modifier_informations'] = true;
 }

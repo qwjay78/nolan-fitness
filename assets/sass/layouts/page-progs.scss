@@ -1,25 +1,24 @@
-
 // programmes
 .cards-prog {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-& .orange {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  & .orange {
     background-color: $secondary-color;
-}
+  }
 
-& .blue {
+  & .blue {
     background-color: $primary-color;
-}
+  }
 
-& .green {
+  & .green {
     background-color: #22c55e;
-}
+  }
 
-& .card {
+  & .card {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -32,38 +31,44 @@
     cursor: pointer;
     transition: 400ms;
 
+    & p.tip {
+      font-size: 0.6em;
+      font-weight: 700;
+    }
 
-& p.tip {
-    font-size: .6em;
-    font-weight: 700;
-}
+    & p.second-text,
+    li {
+      font-size: 0.5em;
+      font-family: "poppins", Arial, Helvetica, sans-serif;
+      list-style: none;
+    }
 
-& p.second-text, li {
-    font-size: .5em;
-    font-family: 'poppins',Arial, Helvetica, sans-serif;
-    list-style: none;
-}
-
-&:hover {
-    transform: scale(1.1, 1.1);
-}
-}
-&:hover > .card:not(:hover) {
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+  &:hover > .card:not(:hover) {
     filter: blur(2px);
     transform: scale(0.9, 0.9);
-}
-
+  }
 }
 
 // bienvenue
 
-.banner.join.bienvenue{
-    p{
+.banner.join.bienvenue {
+  p {
     color: black;
     font-weight: 500;
-    span{
-        color: rgb(7, 67, 146);
+    span {
+      color: rgb(7, 67, 146);
     }
-    }
+  }
 }
 
+// responsive
+
+@media screen and (max-width: 950px) {
+  .apropos.prog {
+    flex-direction: column;
+  }
+}

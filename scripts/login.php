@@ -22,19 +22,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Démarrer la session
         session_start();
 
-        // Stocker les informations de l'utilisateur dans la session
+        
         $_SESSION['client_id'] = $client_id;
         $_SESSION['prenom'] = $prenom;
         $_SESSION['nom'] = $nom;
         $_SESSION['email'] = $email;
 
-        // Redirection vers l'espace client
+        // Redirection 
         header("Location: ../pages/espace-client.php");
-        exit(); // Assurez-vous d'arrêter l'exécution du script après la redirection
+        exit(); 
     } else {
         echo "Échec de la connexion. Vérifiez vos informations d'identification.";
     }
 
     $conn->close();
 }
-?>

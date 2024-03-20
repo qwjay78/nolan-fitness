@@ -15,7 +15,9 @@ body {
   margin-inline: 0 auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Protest Riot", arial, sans-serif;
 }
 
@@ -83,19 +85,19 @@ a {
   padding-left: 5px;
   color: #0077b6;
 }
-
-.flex-menu {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.menu__dropdown {
+.menu__container .menu__dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 1;
+  width: 100%;
+}
+
+.flex-menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .menu__container .last-item {
@@ -150,7 +152,7 @@ a {
     top: 0;
     z-index: 1;
     width: 100%;
-    height: 1250vh;
+    height: 1400vh;
     margin-left: -100%;
     transition: all 0.5s ease;
   }
@@ -193,7 +195,8 @@ a {
   margin-bottom: 20px;
   text-shadow: 0 0 10px #000;
 }
-.banner__button, .banner .apropos__texte__boutons {
+.banner__button,
+.banner .apropos__texte__boutons {
   display: inline-block;
   padding: 10px 20px;
   background-color: #f7931e;
@@ -204,16 +207,19 @@ a {
   cursor: pointer;
   transition: all ease-in 0.2s;
 }
-.banner__button:hover, .banner .apropos__texte__boutons:hover {
+.banner__button:hover,
+.banner .apropos__texte__boutons:hover {
   color: #fff;
 }
-.banner__button.secondary, .banner .apropos__texte__boutons.secondary {
+.banner__button.secondary,
+.banner .apropos__texte__boutons.secondary {
   border: 1px whitesmoke solid;
   color: whitesmoke;
   background-color: transparent;
   text-shadow: 0 0 10px #000;
 }
-.banner__button.secondary:hover, .banner .apropos__texte__boutons.secondary:hover {
+.banner__button.secondary:hover,
+.banner .apropos__texte__boutons.secondary:hover {
   color: #f7931e;
 }
 
@@ -231,26 +237,35 @@ a {
   .banner__content h2 {
     font-size: 18px;
   }
-  .banner__content .banner__button, .banner__content .banner .apropos__texte__boutons {
+  .banner__content .banner__button,
+  .banner__content .banner .apropos__texte__boutons {
     font-size: 12px;
   }
 }
-#coach, #programmes, #temoignages {
+#coach,
+#programmes,
+#temoignages {
   padding: 25px 20px;
 }
-#coach .section__container, #programmes .section__container, #temoignages .section__container {
+#coach .section__container,
+#programmes .section__container,
+#temoignages .section__container {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
 }
-#coach .section__container h2, #programmes .section__container h2, #temoignages .section__container h2 {
+#coach .section__container h2,
+#programmes .section__container h2,
+#temoignages .section__container h2 {
   text-align: left;
   font-size: 30px;
   margin-bottom: 20px;
   color: #0077b6;
 }
-#coach .section__container hr, #programmes .section__container hr, #temoignages .section__container hr {
+#coach .section__container hr,
+#programmes .section__container hr,
+#temoignages .section__container hr {
   border-top: 4px solid #f7931e;
   border-bottom: none;
   border-left: none;
@@ -258,19 +273,25 @@ a {
   width: 80%;
   margin-top: 0;
 }
-#coach .coach__apropos, #programmes .coach__apropos, #temoignages .coach__apropos {
+#coach .coach__apropos,
+#programmes .coach__apropos,
+#temoignages .coach__apropos {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
   padding: 50px 20px;
 }
-#coach .coach__apropos__img, #programmes .coach__apropos__img, #temoignages .coach__apropos__img {
+#coach .coach__apropos__img,
+#programmes .coach__apropos__img,
+#temoignages .coach__apropos__img {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-#coach .coach__apropos__img__button, #programmes .coach__apropos__img__button, #temoignages .coach__apropos__img__button {
+#coach .coach__apropos__img__button,
+#programmes .coach__apropos__img__button,
+#temoignages .coach__apropos__img__button {
   background-color: #0077b6;
   border: none;
   padding: 0.5rem 1rem;
@@ -279,33 +300,47 @@ a {
   text-align: center;
   cursor: pointer;
 }
-#coach .coach__apropos__img__button:hover, #programmes .coach__apropos__img__button:hover, #temoignages .coach__apropos__img__button:hover {
+#coach .coach__apropos__img__button:hover,
+#programmes .coach__apropos__img__button:hover,
+#temoignages .coach__apropos__img__button:hover {
   background-color: #f7931e;
   transition: all ease-in 0.2s;
 }
-#coach .coach__apropos__img__container, #programmes .coach__apropos__img__container, #temoignages .coach__apropos__img__container {
+#coach .coach__apropos__img__container,
+#programmes .coach__apropos__img__container,
+#temoignages .coach__apropos__img__container {
   overflow: hidden;
   width: 400px;
   height: 400px;
 }
-#coach .coach__apropos__img__container img, #programmes .coach__apropos__img__container img, #temoignages .coach__apropos__img__container img {
+#coach .coach__apropos__img__container img,
+#programmes .coach__apropos__img__container img,
+#temoignages .coach__apropos__img__container img {
   width: 400px;
   height: 400px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
-#coach .coach__apropos__img__container img:hover, #programmes .coach__apropos__img__container img:hover, #temoignages .coach__apropos__img__container img:hover {
+#coach .coach__apropos__img__container img:hover,
+#programmes .coach__apropos__img__container img:hover,
+#temoignages .coach__apropos__img__container img:hover {
   transform: scale(1.2);
 }
-#coach .coach__apropos__text, #programmes .coach__apropos__text, #temoignages .coach__apropos__text {
+#coach .coach__apropos__text,
+#programmes .coach__apropos__text,
+#temoignages .coach__apropos__text {
   flex-basis: 50%;
 }
-#coach .coach__apropos__text h3, #programmes .coach__apropos__text h3, #temoignages .coach__apropos__text h3 {
+#coach .coach__apropos__text h3,
+#programmes .coach__apropos__text h3,
+#temoignages .coach__apropos__text h3 {
   text-align: center;
   font-size: 28px;
   margin-bottom: 1rem;
 }
-#coach .coach__apropos__text p, #programmes .coach__apropos__text p, #temoignages .coach__apropos__text p {
+#coach .coach__apropos__text p,
+#programmes .coach__apropos__text p,
+#temoignages .coach__apropos__text p {
   padding-inline: 50px;
   text-align: center;
 }
@@ -481,20 +516,33 @@ a {
 }
 
 @media screen and (max-width: 965px) {
-  #coach .coach__apropos, #programmes .coach__apropos, #temoignages .coach__apropos {
+  #coach .coach__apropos,
+  #programmes .coach__apropos,
+  #temoignages .coach__apropos {
     flex-direction: column-reverse;
   }
-  #coach .coach__apropos__text p, #programmes .coach__apropos__text p, #temoignages .coach__apropos__text p {
+  #coach .coach__apropos__text p,
+  #programmes .coach__apropos__text p,
+  #temoignages .coach__apropos__text p {
     padding-inline: 0;
     text-align: initial;
   }
 }
 @media screen and (max-width: 440px) {
-  #coach .coach__apropos__img__container, #programmes .coach__apropos__img__container, #temoignages .coach__apropos__img__container, #coach .coach__apropos__img__container img, #programmes .coach__apropos__img__container img, #temoignages .coach__apropos__img__container img, #programmes .programmes__coach__prog__img, #programmes .programmes__coach__prog__img img {
+  #coach .coach__apropos__img__container,
+  #programmes .coach__apropos__img__container,
+  #temoignages .coach__apropos__img__container,
+  #coach .coach__apropos__img__container img,
+  #programmes .coach__apropos__img__container img,
+  #temoignages .coach__apropos__img__container img,
+  #programmes .programmes__coach__prog__img,
+  #programmes .programmes__coach__prog__img img {
     width: 280px;
     height: 280px;
   }
-  #coach .coach__apropos__text h3, #programmes .coach__apropos__text h3, #temoignages .coach__apropos__text h3 {
+  #coach .coach__apropos__text h3,
+  #programmes .coach__apropos__text h3,
+  #temoignages .coach__apropos__text h3 {
     font-size: 24px;
   }
 }
@@ -513,6 +561,9 @@ a {
   .banner.join {
     height: 850px;
   }
+  .banner.join .banner__content {
+    padding: initial;
+  }
 }
 @media screen and (max-width: 400px) {
   .banner.join {
@@ -520,7 +571,7 @@ a {
   }
 }
 footer {
-  background-color: #1C2229;
+  background-color: #1c2229;
   display: flex;
   justify-content: space-around;
   padding: 6rem 8rem;
@@ -600,13 +651,15 @@ footer .footer__reseaux .up i {
   }
 }
 @media screen and (max-width: 600px) {
-  .footer__infos, .footer__reseaux {
+  .footer__infos,
+  .footer__reseaux {
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  footer .footer__infos__cadre, footer .footer__infos p {
+  footer .footer__infos__cadre,
+  footer .footer__infos p {
     width: 80%;
   }
   footer .footer__infos__logo {
@@ -622,7 +675,8 @@ footer .footer__reseaux .up i {
   align-items: center;
   background-color: #fff;
   padding: 1rem;
-  width: 1000px;
+  width: 100%;
+  max-width: 1200px;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -640,7 +694,8 @@ footer .footer__reseaux .up i {
   width: 80%;
 }
 
-.input-container input, .form button {
+.input-container input,
+.form button {
   outline: none;
   border: 1px solid #e5e7eb;
   margin: 8px 0;
@@ -691,7 +746,7 @@ footer .footer__reseaux .up i {
 }
 
 .signup-link {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-align: center;
@@ -699,6 +754,7 @@ footer .footer__reseaux .up i {
 
 .signup-link a {
   text-decoration: underline;
+  color: #0077b6;
 }
 
 .banner.connexion {
@@ -710,6 +766,10 @@ footer .footer__reseaux .up i {
 .banner.connexion .banner__content {
   bottom: 0;
   top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-new {
@@ -735,7 +795,8 @@ footer .footer__reseaux .up i {
   padding-left: 30px;
 }
 
-.title::before, .title::after {
+.title::before,
+.title::after {
   position: absolute;
   content: "";
   height: 16px;
@@ -757,7 +818,8 @@ footer .footer__reseaux .up i {
   animation: pulse 1s linear infinite;
 }
 
-.message, .signin {
+.message,
+.signin {
   color: rgba(88, 87, 87, 0.822);
   font-size: 14px;
 }
@@ -809,7 +871,8 @@ footer .footer__reseaux .up i {
   font-size: 0.9em;
 }
 
-.form-new label .input:focus + span, .form-new label .input:valid + span {
+.form-new label .input:focus + span,
+.form-new label .input:valid + span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
@@ -844,13 +907,40 @@ footer .footer__reseaux .up i {
     opacity: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .form,
+  .form-new {
+    width: 100vw;
+  }
+  .form .title,
+  .form-new .title {
+    font-size: 22px;
+  }
+  .form .input-container,
+  .form .input-container input,
+  .form label,
+  .form-new .input-container,
+  .form-new .input-container input,
+  .form-new label {
+    width: 95%;
+  }
+  .form .input-container span,
+  .form-new .input-container span {
+    padding-left: 88%;
+  }
+  .form .submit,
+  .form-new .submit {
+    width: 90%;
+  }
+}
 .form-contact {
   position: relative;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  width: 900px;
+  width: 100%;
+  max-width: 1000px;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -904,6 +994,12 @@ footer .footer__reseaux .up i {
   height: 500px;
   background-color: #f7931e;
 }
+.banner.contact .banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: initial;
+}
 
 .banner.contact h2 {
   text-shadow: none;
@@ -915,6 +1011,18 @@ footer .footer__reseaux .up i {
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 500px) {
+  .form-contact {
+    margin-bottom: 2rem;
+  }
+  .form-contact .flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .banner.contact {
+    height: 700px;
+  }
+}
 .apropos {
   display: flex;
   padding: 3rem;
@@ -984,6 +1092,26 @@ footer .footer__reseaux .up i {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 950px) {
+  .apropos {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+  .banner.titles h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .apropos.prog .apropos__texte__boutons {
+    flex-direction: column-reverse;
+  }
+  .apropos .apropos__texte__boutons {
+    flex-direction: column;
+  }
+  .apropos__texte__boutons {
+    gap: 0.5rem;
+  }
+}
 .services {
   display: flex;
   flex-direction: column;
@@ -1086,7 +1214,8 @@ footer .footer__reseaux .up i {
   opacity: 0.8;
 }
 
-.card:before, .card:after {
+.card:before,
+.card:after {
   content: "";
   transform: scale(0);
   transform-origin: top left;
@@ -1115,7 +1244,8 @@ footer .footer__reseaux .up i {
   filter: grayscale(100%);
 }
 
-.card:hover:before, .card:hover:after {
+.card:hover:before,
+.card:hover:after {
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -1152,6 +1282,29 @@ footer .footer__reseaux .up i {
   }
   .info h1 {
     margin: 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .services {
+    margin: 0;
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card,
+  .card-grid-space {
+    width: 100%;
+  }
+  .services p {
+    padding-inline: 0;
   }
 }
 .message-espace {
@@ -1406,6 +1559,37 @@ input[type=submit][name=modifier_informations]:active {
   font-size: 1.1rem;
 }
 
+@media screen and (max-width: 1200px) {
+  #programmes .cards-prog {
+    flex-direction: column;
+    align-items: center;
+  }
+  #programmes .cards-prog .card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #coach.profil .coach__apropos {
+    flex-direction: column;
+  }
+  #coach.profil .coach__apropos__text,
+  #coach.profil .coach__apropos__text,
+  #coach.profil .coach__apropos__img {
+    width: 70vw;
+  }
+  #coach.profil .coach__apropos__img__container img,
+  #coach.profil .coach__apropos__img__container {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  input[type=submit][name=modifier_informations],
+  input[type=submit][name=enregistrer_modifications] {
+    font-size: initial;
+    padding: 0.5em 0.8em;
+  }
+}
 .cards-prog {
   display: flex;
   flex-direction: row;
@@ -1440,7 +1624,8 @@ input[type=submit][name=modifier_informations]:active {
   font-size: 0.6em;
   font-weight: 700;
 }
-.cards-prog .card p.second-text, .cards-prog .card li {
+.cards-prog .card p.second-text,
+.cards-prog .card li {
   font-size: 0.5em;
   font-family: "poppins", Arial, Helvetica, sans-serif;
   list-style: none;
@@ -1459,6 +1644,12 @@ input[type=submit][name=modifier_informations]:active {
 }
 .banner.join.bienvenue p span {
   color: rgb(7, 67, 146);
+}
+
+@media screen and (max-width: 950px) {
+  .apropos.prog {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

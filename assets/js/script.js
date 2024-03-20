@@ -48,8 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.classList.toggle('mobile-menu')
     })
 
-
-
-
   
 });

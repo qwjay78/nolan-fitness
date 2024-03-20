@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     $nom_prenom = $_POST["nom_prenom"];
     $adresse_mail = $_POST["adresse_mail"];
     $message = $_POST["message"];
 
-    
+
     $destinataire = "nolan@nolan-fitness.go.yj.fr";
 
     // Sujet de l'e-mail
@@ -20,11 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "De: $adresse_mail\r\n";
     $headers .= "Répondre à: $adresse_mail\r\n";
 
-    
+
     mail($destinataire, $sujet, $corps_message, $headers);
 
     // Redirection 
     header("Location: ../pages/merci.php");
     exit();
 }
-?>

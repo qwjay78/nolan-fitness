@@ -1,19 +1,19 @@
 // nav
-.menu__container{
+.menu__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-.menu {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .menu {
     &__logo {
       display: flex;
       align-items: center;
       gap: 0.8rem;
       font-size: 15px;
-      & img{
-          width: 3rem;
+      & img {
+        width: 3rem;
       }
     }
     &__list {
@@ -21,8 +21,8 @@
       align-items: center;
       list-style: none;
       gap: 3rem;
-      & h4{
-        font-family: 'Poppins', arial;
+      & h4 {
+        font-family: "Poppins", arial;
         font-size: 1em;
         font-weight: normal;
       }
@@ -31,18 +31,18 @@
         padding: 0.5rem;
         position: relative;
         background-color: white;
-        &.drop{
-          & a{
+        &.drop {
+          & a {
             font-size: 14px;
-            font-family: 'Poppins', arial;
+            font-family: "Poppins", arial;
           }
         }
         & a {
           text-decoration: none;
           color: black;
-          &:hover{
-              color: $secondary-color;
-            }
+          &:hover {
+            color: $secondary-color;
+          }
         }
         &.has-dropdown {
           &:hover .menu__dropdown {
@@ -51,92 +51,88 @@
         }
       }
     }
-    &__current-page{
-      & a{
-          color: $primary-color;
+    &__current-page {
+      & a {
+        color: $primary-color;
       }
     }
-    & i{
+    & i {
       font-size: 12px;
       padding-left: 5px;
       color: $primary-color;
     }
-  }
-}
-  
-  .flex-menu{
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  
-  }
-  
-  // dropdown
-  .menu__dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-  }
-  
-  //   dernier bouton
-  
-  .menu__container .last-item {
-    background-color: $primary-color;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    & a {
-      color: white;
+    // dropdown
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      width: 100%;
     }
   }
-  
+}
 
+.flex-menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
 
-  .menu__current-page{
-    color: $primary-color;
+//   dernier bouton
+
+.menu__container .last-item {
+  background-color: $primary-color;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  & a {
+    color: white;
   }
+}
 
-  .menu .menu-hamburger{
-    display: none;
-    width: 40px;
-    object-fit: cover;
-    position: absolute;
-    top: 35px;
-    right: 50px;
-  }
+.menu__current-page {
+  color: $primary-color;
+}
 
+.menu .menu-hamburger {
+  display: none;
+  width: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 35px;
+  right: 50px;
+}
 
 // responsive
 
-@media  screen and (max-width:1300px) {
-  .menu__container{
-  .menu__logo{
-    &__title{
-      font-size: 24px;
+@media screen and (max-width: 1300px) {
+  .menu__container {
+    .menu__logo {
+      &__title {
+        font-size: 24px;
+      }
+    }
+    .menu__list {
+      & li {
+        font-size: 15px;
+      }
     }
   }
-  .menu__list{
-    & li{
-      font-size: 15px;
-    }
-  }
-}
 }
 
-@media screen and (max-width:1180px) {
-  .menu__container{
+@media screen and (max-width: 1180px) {
+  .menu__container {
     flex-direction: column;
     gap: 40px;
   }
 }
-@media screen and (max-width:965px) {
-  .menu__container{
+@media screen and (max-width: 965px) {
+  .menu__container {
     gap: 0px;
     flex-direction: row;
   }
-  .menu__container .menu__list{
+  .menu__container .menu__list {
     position: absolute;
     flex-direction: column;
     display: flex;
@@ -146,25 +142,21 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    height: 1250vh;
+    height: 1400vh;
     margin-left: -100%;
     transition: all 0.5s ease;
-
   }
-  .menu__list.mobile-menu{
+  .menu__list.mobile-menu {
     margin-left: 0;
   }
-  .menu .menu-hamburger{
+  .menu .menu-hamburger {
     display: block;
     z-index: 1;
   }
 }
 
-@media screen and (max-width:370px) {
-  .menu .menu-hamburger{
+@media screen and (max-width: 370px) {
+  .menu .menu-hamburger {
     right: 10px;
   }
 }
-
-
-
