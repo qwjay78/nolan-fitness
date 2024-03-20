@@ -153,6 +153,28 @@
     display: block;
     z-index: 1;
   }
+  .menu__list__item.has-dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-menu{
+    display: none;
+  }
+  .menu__container .menu__dropdown{
+    width: 50vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: initial;
+    left: initial;
+  }
+  .menu__container .menu__list__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (max-width: 370px) {
